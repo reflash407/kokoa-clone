@@ -19,10 +19,37 @@
     color: #2e363e;
 }
 
+@keyframes notificationAnimation {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px) rotateY(360deg);
+    }
+    100% {
+        transform: none;
+    }
+}
+
 .nav__notification {
 
     position: absolute;
     left: 15px;
     bottom: 15px;
+    animation:notificationAnimation 2s ease-in-out infinite;
+}
 
+@keyframes appearBtnAnimation {
+    from {
+        transform:translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.nav__btn {
+    animation: appearBtnAnimation 0.5s ease-in-out;
 }
